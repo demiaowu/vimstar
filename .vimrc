@@ -50,7 +50,7 @@ nmap <Leader>fq :qa!<CR>   	" 不做任何保存，直接退出vim fq = froce qu
 
 
 filetype on			" 开启文件类型检测
-filetype plugin on 	" 根据侦测到的不同类型加载对应的插件 ni
+filetype plugin on 	" 根据侦测到的不同类型加载对应的插件
 
 
 
