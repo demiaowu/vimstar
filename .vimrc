@@ -46,17 +46,17 @@ colorscheme solarized
 " vim自身（非插件）快捷键
 let mapleader=";"			" 定义快捷键的前缀，即<Leader>
 
-vnoremap <Leader>c			" 设置快捷键将选中的文本块复制到系统剪切板
-nmap <Leader>v				" 设置快捷键将系统中的剪贴板粘贴至vim
+vnoremap <Leader>c			" 设置快捷键将选中的文本块复制到系统剪切板——模仿windows
+nmap <Leader>v				" 设置快捷键将系统中的剪贴板粘贴至vim——模仿windows
 
 nmap <Leader>q :q<CR>		" 定义快捷键关闭当前窗口
-nmap <Leader>s :w<CR>		" 定义快捷键保存当前窗口
+nmap <Leader>s :w<CR>		" 定义快捷键保存当前窗口——模仿windows
 nmap <Leader>w :wa<CR>:q<CR>" 定义快捷键保存所有窗口内容并退出
 nmap <Leader>fq :qa!<CR>   	" 不做任何保存，直接退出vim fq = froce quit
 
 
 filetype on			" 开启文件类型检测
-filetype plugin on 	" 根据侦测到的不同类型加载对应的插件 ni
+filetype plugin on 	" 根据侦测到的不同类型加载对应的插件
 
 
 
