@@ -3,7 +3,7 @@
 curpwd=$PWD
 echo $curpwd
 
-mv -f .vimrc ~
-mv -f .vim ~
+cp -f .vimrc ~
+cp -fr .vim ~
 
 exit 0
