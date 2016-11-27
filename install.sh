@@ -1,7 +1,7 @@
 #!/bin/sh 
 
-curpwd=$PWD
-echo $curpwd
+befpwd=$PWD                                                     
+"echo $befpwd
 
 cp -f .vimrc ~
 cp -fr .vim ~
