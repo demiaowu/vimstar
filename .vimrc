@@ -74,6 +74,8 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'nathanaelkane/vim-indent-guides'
 
+Plugin 'scrooloose/nerdtree'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -109,5 +111,14 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
 
+""""""""""""""""""
+" 配置工程文件浏览
+" 多次按ctl+w，在窗口间切换，退出按:q，ctrl+w+h进入树形界面，ctrl+w+l进入文件界面，目录前面有+或者>号，摁Enter会展开目录，文件前面是-号
+nmap <Leader>fl :NERDTreeToggle<CR> " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
+let NERDTreeWinSize=32              " 设置NERDTree子窗口宽度
+let NERDTreeWinPos="right"          " 设置NERDTree子窗口位置
+let NERDTreeShowHidden=1            " 显示隐藏文件
+let NERDTreeMinimalUI=1             " NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeAutoDeleteBuffer=1      " 删除文件时自动删除文件对应 buffer
 
 
