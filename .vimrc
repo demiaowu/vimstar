@@ -91,4 +91,7 @@ set t_Co=256                " 开启中端的256色支持
 set background=dark
 colorscheme solarized 
 "colorscheme molokai        " 多彩
-"colorscheme phd           " 复古
+"colorscheme phd            " 复古
+
+set guifont=YaHei\ Consolas\ Hybrid\ 12     " 设置字体
+
