@@ -11,8 +11,11 @@ Demiao WU's .vimrc
 ## Installation
 
 `$ git clone git@github.com:demiaowu/vimstar.git`
+
 `$ cd vimstar`
+
 `$ chmod a+x install.sh`
+
 `$ ./install.sh`
 
 ## Quickstart
@@ -29,4 +32,4 @@ Vim license, see LICENSE
 
 ## Maintainer
 
-Demiao WU <[demiaowu@163.com](demiaowu@163.com)
+Demiao WU <[demiaowu@163.com](demiaowu@163.com)>
