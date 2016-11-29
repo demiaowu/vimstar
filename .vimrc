@@ -77,6 +77,8 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 
+Plugin 'derekwyatt/vim-fswitch'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -136,5 +138,11 @@ let NERDTreeAutoDeleteBuffer=1      " 删除文件时自动删除文件对应 bu
 map <Leader>bl :MBEToggle<cr>   " 显示/隐藏 MiniBufExplorer 窗口
 map <Leader>n :MBEbn<cr>          " buffer 切换快捷键
 map <Leader>p :MBEbp<cr>
+
+
+
+""""""""""""""""""""""""
+" 配置接口和实现快速切换
+nmap <silent> <Leader>sw :FSHere<cr>
 
 
