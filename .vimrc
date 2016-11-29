@@ -9,7 +9,7 @@ set nu		        " 显示行号
 set hls		        " 打开高亮	
 "set nohls	        " 关闭高亮
 set nocompatible    " 关闭兼容模式
-
+set nobackup        " 不自动生成备份
 """"""""""
 " 代码缩进
 filetype indent on		" 自适应不同语言的智能缩进
@@ -75,6 +75,8 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'fholgado/minibufexpl.vim'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -112,13 +114,27 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
 
 """"""""""""""""""
+" 窗口跳转
+nnoremap nw <C-W><C-W>              " 设置窗口跳转的快捷键
+
+
+""""""""""""""""""
 " 配置工程文件浏览
 " 多次按ctl+w，在窗口间切换，退出按:q，ctrl+w+h进入树形界面，ctrl+w+l进入文件界面，目录前面有+或者>号，摁Enter会展开目录，文件前面是-号
+" 回车，打开选中文件；r，刷新工程目录文件列表；I（大写），显示/隐藏隐藏文件；m，出现创建/删除/剪切/拷贝操作列表
 nmap <Leader>fl :NERDTreeToggle<CR> " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
 let NERDTreeWinSize=32              " 设置NERDTree子窗口宽度
 let NERDTreeWinPos="right"          " 设置NERDTree子窗口位置
 let NERDTreeShowHidden=1            " 显示隐藏文件
 let NERDTreeMinimalUI=1             " NERDTree 子窗口中不显示冗余帮助信息
 let NERDTreeAutoDeleteBuffer=1      " 删除文件时自动删除文件对应 buffer
+
+
+" 设置多文档编辑
+" 在某个 buffer 上键入 s 将该 buffer 对应 window 与先前 window 上下排列，
+" 键入 v 则左右排列（光标必须在 buffer 列表子窗口内）
+map <Leader>bl :MBEToggle<cr>   " 显示/隐藏 MiniBufExplorer 窗口
+map <Leader>n :MBEbn<cr>          " buffer 切换快捷键
+map <Leader>p :MBEbp<cr>
 
 
