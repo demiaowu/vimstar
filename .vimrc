@@ -36,10 +36,10 @@ syntax on			" 允许用制定语法高亮配色方案替换默认方案
 
 """"""""""""""
 " 设置主题颜色为 solarized
-let g:solarized_termcolors=256
-set t_Co=256                " 开启中端的256色支持
-set background=dark
-colorscheme solarized
+"let g:solarized_termcolors=256
+"set t_Co=256                " 开启中端的256色支持
+"set background=dark
+"colorscheme solarized
 
 
 """""""""""""""""""""""""
@@ -55,10 +55,32 @@ nmap <Leader>w :wa<CR>:q<CR>" 定义快捷键保存所有窗口内容并退出
 nmap <Leader>fq :qa!<CR>   	" 不做任何保存，直接退出vim fq = froce quit
 
 
-filetype on			" 开启文件类型检测
-filetype plugin on 	" 根据侦测到的不同类型加载对应的插件
+"filetype on			" 开启文件类型检测
+"filetype plugin on 	" 根据侦测到的不同类型加载对应的插件
+"
+
+
+
+" 安装插件管理Vundle.vim
+"set nocompatible       " 上面已经开启
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+" vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
 
 
 
+
+" 设置主题颜色为 solarized
+let g:solarized_termcolors=256
+set t_Co=256                " 开启中端的256色支持
+set background=dark
+colorscheme solarized 
