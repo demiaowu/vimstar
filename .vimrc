@@ -78,7 +78,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 
 Plugin 'derekwyatt/vim-fswitch'
-
+Plugin 'derekwyatt/vim-protodef'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -137,12 +137,19 @@ let NERDTreeAutoDeleteBuffer=1      " 删除文件时自动删除文件对应 bu
 " 键入 v 则左右排列（光标必须在 buffer 列表子窗口内）
 map <Leader>bl :MBEToggle<cr>   " 显示/隐藏 MiniBufExplorer 窗口
 map <Leader>n :MBEbn<cr>          " buffer 切换快捷键
-map <Leader>p :MBEbp<cr>
+map <Leader>m :MBEbp<cr>
 
 
 
 """"""""""""""""""""""""
 " 配置接口和实现快速切换
 nmap <silent> <Leader>sw :FSHere<cr>
+
+""""""""""""""""""""""——quit
+" 配置接口快速生成框架 快捷键 <leader>PP
+" let g:protodefprotogetter='~/.vim/bundle/protodef/pullproto.pl'     " 设置 pullproto.pl 脚本路径
+" let g:disable_protodef_sorting=1                                    " 成员函数的实现顺序与声明顺序一致
+
+
 
 
