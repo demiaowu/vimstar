@@ -69,7 +69,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
+" 颜色主题
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/phd'    
+
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,3 +90,5 @@ let g:solarized_termcolors=256
 set t_Co=256                " 开启中端的256色支持
 set background=dark
 colorscheme solarized 
+"colorscheme molokai        " 多彩
+"colorscheme phd           " 复古
