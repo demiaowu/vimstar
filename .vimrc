@@ -224,3 +224,7 @@ let g:tagbar_type_cpp = {
 \ }
 
 
+"YCM
+"
+nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>        " 只能是 #include 或已打开的文件
