@@ -20,7 +20,7 @@ Demiao WU's .vimrc
 
 ## Quickstart
 
-To be advised.
+Just need consult the `.vimrc` and there are enough comments that you can quick get it.
 
 ## Screenshots
 
