@@ -213,4 +213,4 @@ let g:ycm_complete_in_strings=1                             " 在字符串输入
 let g:ycm_complete_in_comments=1                            " 在注释输入中也能补全
 let g:ycm_collect_identifiers_from_comments_and_strings=0   " 注释和字符串中的文字也会被收入补全
 let g:ycm_seed_identifiers_with_syntax=1                    " 开启语义补
-
+inoremap <expr> <CR> pumvisible() ? "\<C-y>":"\<CR>"  "回车即选中当前项 
