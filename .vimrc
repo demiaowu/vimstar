@@ -1,4 +1,4 @@
-"""""""""""""""""
+""""""""""""""""
 "vim cofiguration
 
 
@@ -152,31 +152,10 @@ nmap <silent> <Leader>sw :FSHere<cr>
 " let g:protodefprotogetter='~/.vim/bundle/protodef/pullproto.pl'     " 设置 pullproto.pl 脚本路径
 " let g:disable_protodef_sorting=1                                    " 成员函数的实现顺序与声明顺序一致
 
+
+
+
 """""""""""""""""""""""""""""
-" 配置taglist，使用tagbar插件
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 " 标签列表
 
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边
@@ -223,8 +202,15 @@ let g:tagbar_type_cpp = {
      \ }
 \ }
 
-
+"let g:indexer_ctagsCommandLineOptions="--c++-kinds=+l+p+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 "YCM
 "
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/.ycm_extra_conf.py'
 nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>        " 只能是 #include 或已打开的文件
+let g:ycm_min_num_of_chars_for_completion=2                 " 输入第 2 个字符开始补全
+let g:ycm_complete_in_strings=1                             " 在字符串输入中也能补全
+let g:ycm_complete_in_comments=1                            " 在注释输入中也能补全
+let g:ycm_collect_identifiers_from_comments_and_strings=0   " 注释和字符串中的文字也会被收入补全
+let g:ycm_seed_identifiers_with_syntax=1                    " 开启语义补
+
