@@ -20,6 +20,7 @@ set tabstop=4			" tap键宽度
 set shiftwidth=4		" 设置格式化时制表符占用的空格数
 set softtabstop=4		" 让vim把连续数量的空格视为一个制表符
 
+" za：关闭或者打开当前折叠；zm：关闭所有折叠；zr：打开所有折叠
 set foldmethod=syntax   " 基于语法的折叠
 set nofoldenable        " 启动vim时关闭折叠代码
 
@@ -208,7 +209,7 @@ let g:tagbar_type_cpp = {
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/.ycm_extra_conf.py'
 nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>        " 只能是 #include 或已打开的文件
-let g:ycm_min_num_of_chars_for_completion=2                 " 输入第 2 个字符开始补全
+let g:ycm_min_num_of_chars_for_completion=1                 " 输入第 1 个字符开始补全
 let g:ycm_complete_in_strings=1                             " 在字符串输入中也能补全
 let g:ycm_complete_in_comments=1                            " 在注释输入中也能补全
 let g:ycm_collect_identifiers_from_comments_and_strings=0   " 注释和字符串中的文字也会被收入补全

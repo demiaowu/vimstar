@@ -85,6 +85,8 @@ flags = [
 '/usr/include/c++/6/',
 '-isystem',
 '/usr/include',
+'-isystem',
+'/home/demiaowu/stride/stride/gtest-1.8.0/googletest/include',
 ]
 
 
